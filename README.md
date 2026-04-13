@@ -2,6 +2,10 @@
 
 A recruiter-ready full-stack e-commerce project for a traditional natural medicine brand.
 
+## Live Demo
+
+🌐 [https://shula-website-new.vercel.app/](https://shula-website-new.vercel.app/)
+
 ## Tech Stack
 
 - React + Vite
