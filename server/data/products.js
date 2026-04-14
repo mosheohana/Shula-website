@@ -66,5 +66,23 @@ export const products = [
     image:
       "/images/rosemary-lavender.jpg",
     notes: { he: ["חרסית", "קומפרס", "מקומי"], en: ["Clay", "Compress", "Focused"] }
+  },
+
+  {
+    id: "adapted-serom",
+    price: 64,
+    category: { he: "סרום", en: "serom" },
+    name: { he: "סרום בהתאמה אישית", en: "adapted serom" },
+    short: {
+      he: "סרום משמנים צמחיים",
+      en: "oil serom."
+    },
+    description: {
+      he: "נעשה בהזמנה אישית לפי צורך.",
+      en: "adapted privately."
+    },
+    image:
+      "/images/Screenshot 2026-04-14 124544.png",
+    notes: { he: ["חרסית", "קומפרס", "מקומי"], en: ["Clay", "Compress", "Focused"] }
   }
 ];
