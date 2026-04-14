@@ -4,7 +4,7 @@ A recruiter-ready full-stack e-commerce project for a traditional natural medici
 
 ## Live Demo
 
-🌐 [https://shula-website-new.vercel.app/](shula-website-omega.vercel.app)
+🌐[press here!!](https://shula-website-omega.vercel.app/) 
 
 ## Tech Stack
 
