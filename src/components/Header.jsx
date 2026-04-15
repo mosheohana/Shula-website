@@ -11,7 +11,8 @@ export default function Header() {
   const navItems = [
     { href: "/", label: t.nav.home },
     { href: "/#about", label: t.nav.about },
-    { href: "/#shop", label: t.nav.shop }
+    { href: "/#shop", label: t.nav.shop },
+    { href: "/#philosophy", label: language === "he" ? "פילוסופיה" : "Philosophy" }
   ];
 
   return (

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="section-shell grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr]">
         <div>
           <p className="font-display text-3xl font-bold">שולה - רפואה מסורתית</p>
-          <p className="mt-4 max-w-xl text-linen/75">{t.philosophyText}</p>
+          <p className="mt-4 max-w-xl text-linen/75">{t.heroText}</p>
         </div>
         <form className="grid gap-3">
           <label className="font-display text-2xl font-bold" htmlFor="email">

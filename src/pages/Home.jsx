@@ -16,6 +16,7 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [isSoundOn, setIsSoundOn] = useState(false);
   const audioRef = useRef(null);
+  const philosophyParagraphs = t.philosophyText.split("\n\n").filter(Boolean);
 
   useEffect(() => {
     // Fetch products from API layer.
@@ -54,12 +55,7 @@ export default function Home() {
         >
           <source src="/media/hero-flowers-birds.mp4" type="video/mp4" />
         </video>
-        <audio
-          ref={audioRef}
-          src="/media/birds-ambiance.mp3"
-          loop
-          preload="none"
-        />
+        <audio ref={audioRef} src="/media/birds-ambiance.mp3" loop preload="none" />
         <button
           className="absolute end-6 top-6 z-20 inline-flex min-h-11 items-center gap-2 rounded-lg border border-linen/35 bg-moss/40 px-4 py-2 text-sm font-bold text-linen backdrop-blur-md transition hover:border-oat hover:text-oat"
           onClick={toggleHeroSound}
@@ -123,33 +119,6 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="story-grid py-20">
-        <div className="section-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm font-bold text-clay">{t.ritualTitle}</p>
-            <h2 className="mt-3 font-display text-4xl font-bold text-moss md:text-5xl">
-              {t.philosophyTitle}
-            </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            <p className="text-lg leading-8 text-ink/70">{t.philosophyText}</p>
-            <ol className="grid gap-4">
-              {t.ritualSteps.map((step, index) => (
-                <li
-                  key={step}
-                  className="flex items-center gap-4 rounded-lg border border-moss/10 bg-linen/75 p-4"
-                >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-olive text-linen">
-                    {index + 1}
-                  </span>
-                  <span className="font-bold text-moss">{step}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
-
       <section
         id="about"
         className="section-shell grid scroll-mt-28 gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr]"
@@ -159,7 +128,7 @@ export default function Home() {
           <h2 className="mt-3 font-display text-5xl font-bold leading-tight text-moss md:text-6xl">
             {t.aboutTitle}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-ink/70">{t.aboutBody}</p>
+          <p className="mt-6 whitespace-pre-line text-lg leading-8 text-ink/70">{t.aboutBody}</p>
         </div>
         <MotionDiv
           className="grid gap-5"
@@ -176,11 +145,11 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-2">
             <div className="rounded-lg bg-moss p-6 text-linen">
               <p className="font-display text-3xl font-bold">01</p>
-              <p className="mt-4 text-linen/80">{t.philosophyText}</p>
+              <p className="mt-4 text-linen/80">{t.heroText}</p>
             </div>
             <div className="rounded-lg border border-moss/10 bg-white/58 p-6">
               <p className="font-display text-3xl font-bold text-clay">02</p>
-              <p className="mt-4 text-ink/70">{t.heroText}</p>
+              <p className="mt-4 text-ink/70">{t.shopIntro}</p>
             </div>
           </div>
         </MotionDiv>
@@ -199,6 +168,37 @@ export default function Home() {
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
+        </div>
+      </section>
+
+      <section id="philosophy" className="story-grid scroll-mt-28 py-24">
+        <div className="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+          <div>
+            <p className="text-sm font-bold text-clay">{t.ritualTitle}</p>
+            <h2 className="mt-3 font-display text-4xl font-bold text-moss md:text-5xl">
+              {t.philosophyTitle}
+            </h2>
+            <ol className="mt-8 grid gap-4">
+              {t.ritualSteps.map((step, index) => (
+                <li
+                  key={step}
+                  className="flex items-center gap-4 rounded-lg border border-moss/10 bg-linen/75 p-4"
+                >
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-olive text-linen">
+                    {index + 1}
+                  </span>
+                  <span className="font-bold text-moss">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="rounded-lg border border-moss/10 bg-linen/80 p-6 shadow-soft md:p-8">
+            {philosophyParagraphs.map((paragraph) => (
+              <p key={paragraph} className="mb-5 text-lg leading-9 text-ink/75 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
     </PageTransition>
