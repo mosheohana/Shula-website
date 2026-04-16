@@ -4,8 +4,6 @@ A modern e-commerce website for a natural medicine brand.
 
 The site is built as a polished portfolio project for a small Hebrew-first brand that sells handmade herbal products, creams, oils, and traditional remedies.
 
-## Live Demo
-
 [Open the live website](https://shula-website-omega.vercel.app/)
 
 ## Main Features
