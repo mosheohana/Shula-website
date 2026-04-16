@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "cart": "Cart"
+  },
+  "heroEyebrow": "Traditional desert medicine",
+  "heroTitle": "Quiet plants, careful hands, slow healing.",
+  "heroText": "Balms, infusions, and oils shaped by traditional knowledge, clean ingredients, and a calmer pace.",
+  "heroCta": "Explore shop",
+  "secondaryCta": "Our story",
+  "featured": "Featured remedies",
+  "philosophyTitle": "Not beauty. Healing rooted in nature.",
+  "philosophyText": "Each remedy begins with listening to the body and the season: bitter leaves, gentle carrier oils, clay, soil, and low sun.",
+  "ritualTitle": "A simple daily ritual",
+  "ritualSteps": [
+    "Boil water",
+    "Breathe deeply",
+    "Apply or steep",
+    "Let time work"
+  ],
+  "shopTitle": "Remedy shop",
+  "shopIntro": "Small batches, clear use, deep roots.",
+  "addToCart": "Add to cart",
+  "viewProduct": "Details",
+  "aboutTitle": "Shula - Traditional Medicine",
+  "aboutBody": "The brand is built around folk knowledge carried by healers, families, and women who knew how to read a plant by scent, touch, and season. This is a place for simple materials, clean language, and products made to support the body rather than hide it.",
+  "cartTitle": "Shopping cart",
+  "emptyCart": "Your cart is still empty.",
+  "total": "Total",
+  "checkout": "Checkout",
+  "backToShop": "Back to shop",
+  "newsletter": "Seasonal letter",
+  "newsletterText": "Short guides, seasonal herbs, and new remedies.",
+  "emailPlaceholder": "Email address",
+  "join": "Join"
+}
