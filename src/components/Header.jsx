@@ -22,7 +22,7 @@ export default function Header() {
             <img
               src={logo}
               alt="שולה - רפואה מסורתית"
-              className="h-full w-full scale-110 object-cover object-center"
+              className="h-full w-full scale-125 object-cover [object-position:center_47%]"
             />
           </span>
           <span className="font-display text-2xl font-bold">שולה</span>
