@@ -1,4 +1,5 @@
 import Button from "./Button.jsx";
+import { Github } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage.jsx";
 import logo from "../assets/shula-logo-circle.jpg";
 
@@ -13,17 +14,29 @@ export default function Footer() {
           <p className="mt-4 max-w-xl text-linen/75">{t.heroText}</p>
         </div>
 
-        <a
-          href="/"
-          className="mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full border border-linen/25 bg-linen shadow-soft"
-          aria-label="שולה - רפואה מסורתית"
-        >
-          <img
-            src={logo}
-            alt="שולה - רפואה מסורתית"
-            className="h-full w-full scale-125 object-cover [object-position:center_47%]"
-          />
-        </a>
+        <div className="grid justify-items-center gap-4">
+          <a
+            href="/"
+            className="grid h-24 w-24 place-items-center overflow-hidden rounded-full border border-linen/25 bg-linen shadow-soft"
+            aria-label="שולה - רפואה מסורתית"
+          >
+            <img
+              src={logo}
+              alt="שולה - רפואה מסורתית"
+              className="h-full w-full scale-125 object-cover [object-position:center_47%]"
+            />
+          </a>
+
+          <a
+            href="https://github.com/mosheohana/Shula-website"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-linen/25 px-4 py-2 text-sm font-bold text-linen transition hover:border-oat hover:text-oat"
+          >
+            <Github size={18} />
+            GitHub
+          </a>
+        </div>
 
         <form className="grid gap-3">
           <label className="font-display text-2xl font-bold" htmlFor="email">
