@@ -172,13 +172,16 @@ export default function Home() {
       </section>
 
       <section id="philosophy" className="story-grid scroll-mt-28 py-24">
-        <div className="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
-          <div>
+        <div className="section-shell">
+          <div className="max-w-4xl">
             <p className="text-sm font-bold text-clay">{t.ritualTitle}</p>
             <h2 className="mt-3 font-display text-4xl font-bold text-moss md:text-5xl">
               {t.philosophyTitle}
             </h2>
-            <ol className="mt-8 grid gap-4">
+          </div>
+
+          <div className="mt-12 grid gap-8 xl:grid-cols-[1fr_2.6fr]">
+            <ol className="grid h-fit gap-4">
               {t.ritualSteps.map((step, index) => (
                 <li
                   key={step}
@@ -191,13 +194,14 @@ export default function Home() {
                 </li>
               ))}
             </ol>
-          </div>
-          <div className="rounded-lg border border-moss/10 bg-linen/80 p-6 shadow-soft md:p-8">
-            {philosophyParagraphs.map((paragraph) => (
-              <p key={paragraph} className="mb-5 text-lg leading-9 text-ink/75 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
+
+            <div className="rounded-lg border border-moss/10 bg-linen/80 p-6 shadow-soft md:p-10">
+              {philosophyParagraphs.map((paragraph) => (
+                <p key={paragraph} className="mb-5 text-lg leading-9 text-ink/75 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
