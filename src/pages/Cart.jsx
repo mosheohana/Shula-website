@@ -1,12 +1,36 @@
+import { useState } from "react";
 import Button from "../components/Button.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import { useCart } from "../hooks/useCart.jsx";
 import { useLanguage } from "../hooks/useLanguage.jsx";
+import { api } from "../services/api.js";
 import { formatCurrency } from "../utils/format.js";
 
 export default function Cart() {
   const { items, total, removeFromCart } = useCart();
   const { language, t } = useLanguage();
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleCheckout() {
+    try {
+      setIsRedirecting(true);
+      setErrorMessage("");
+
+      const session = await api.createCheckoutSession(items);
+
+      if (!session?.url) {
+        throw new Error("Missing checkout URL");
+      }
+
+      window.location.href = session.url;
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error ? error.message : "Could not start checkout right now"
+      );
+      setIsRedirecting(false);
+    }
+  }
 
   return (
     <PageTransition>
@@ -57,8 +81,22 @@ export default function Cart() {
               <p className="mt-2 font-display text-4xl font-bold">
                 {formatCurrency(total, language)}
               </p>
-              <Button variant="clay" className="mt-6 w-full">
-                {t.checkout}
+              {errorMessage ? (
+                <p className="mt-4 rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm text-white">
+                  {errorMessage}
+                </p>
+              ) : null}
+              <Button
+                variant="clay"
+                className="mt-6 w-full disabled:cursor-not-allowed disabled:opacity-70"
+                onClick={handleCheckout}
+                disabled={isRedirecting}
+              >
+                {isRedirecting
+                  ? language === "he"
+                    ? "מעביר לתשלום..."
+                    : "Redirecting..."
+                  : t.checkout}
               </Button>
             </aside>
           </div>

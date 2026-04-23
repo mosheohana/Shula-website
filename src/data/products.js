@@ -1,7 +1,7 @@
 export const products = [
   {
     id: "adapted-serom",
-    price: 64,
+    price: 24,
     category: { he: "סרום", en: "Serum" },
     name: { he: "סרום בהתאמה אישית", en: "Adapted Serum" },
     short: {
@@ -18,7 +18,7 @@ export const products = [
   },
   {
     id: "valerian-drops",
-    price: 0,
+    price: 24,
     category: { he: "טיפות לבליעה", en: "Oral drops" },
     name: { he: "ולריאן", en: "Valerian" },
     short: {
@@ -35,7 +35,7 @@ export const products = [
   },
   {
     id: "face-body-cream",
-    price: 0,
+    price: 24,
     category: { he: "קרם", en: "Cream" },
     name: { he: "קרם פנים וגוף", en: "Face + Body Cream" },
     short: {
@@ -52,7 +52,7 @@ export const products = [
   },
   {
     id: "rich-hair-cream",
-    price: 0,
+    price: 24,
     category: { he: "קרם שיער", en: "Hair cream" },
     name: { he: "קרם שיער עשיר", en: "Rich Hair Cream" },
     short: {
@@ -69,7 +69,7 @@ export const products = [
   },
   {
     id: "calendula-healing-salve",
-    price: 0,
+    price: 24,
     category: { he: "משחה טיפולית", en: "Healing salve" },
     name: { he: "משחה טיפולית קלנדולה", en: "Calendula Healing Salve" },
     short: {

@@ -104,3 +104,5 @@ npm run dev
 ```
 
 The development command runs the frontend and the backend simulation together.
+
+To prepare Stripe test mode later, create a local `.env` file based on `.env.example` and fill in your test keys.
